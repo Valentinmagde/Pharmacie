@@ -1,0 +1,54 @@
+
+  .bg-card {
+    background-color: #3f9b38;
+  }
+
+  .bg-zone {
+    background-color: #0069b4;
+  }
+  .cons-example{
+    margin: auto;
+    width: 80%;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 6%;
+    width: 80%;
+  }
+
+  .align-left{
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  .address, .search-button, .date-picker {
+    width: 48%;
+  }
+  .home-page {
+    color: #666666;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+
+  .list-card {
+    width: 80%; 
+    height: 600px; 
+    margin:auto;
+  }
+
+  .list-div {
+    width: 48%;
+    height: 600px; 
+  }
+
+  .liste-pharmacie{
+    height: 550px;
+    background-color: #fff;
+    padding-top: 10px;
+    overflow: auto;
+  }
+
+  .list-resultat {
+    margin-left: 35px;
+    border-bottom: solid 1px #ddd;
+  }
