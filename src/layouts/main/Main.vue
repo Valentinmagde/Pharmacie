@@ -61,11 +61,14 @@
             <div class="flex flex-wrap">
               <!-- Critaires de recherche -->
               <div class="cons-example pt-6 pb-6">
-                <vs-input
-                  placeholder="Saisir votre adrees"
-                  v-model="value1"
-                  class="align-left address"/>
-
+                <div class="w-1/2 pr-4 mb-4">
+                    <vs-input
+                      placeholder="Saisir votre adrees"
+                      icon-after="true" 
+                      icon="home" 
+                      v-model="value1"
+                      style="width: 100%"/>
+                </div>
                 <div class="flex flex-wrap justify-between date-picker align-left">
                   <div class="mt-3 mb-2 inline-block">
                     <date-picker v-model="time" valueType="format"/>
@@ -440,25 +443,7 @@ import FooterComponent from "../components/Footer.vue";
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
 
-import Vue from 'vue'
-import { vsButton, vsSelect, vsPopup, vsInput, vsRadio, vsIcon } from 'vuesax'
-import 'vuesax/dist/vuesax.css'
-import 'material-icons/iconfont/material-icons.css';
-import * as VueGoogleMaps from 'vue2-google-maps'
 
-Vue.use(vsButton)
-Vue.use(vsSelect)
-Vue.use(vsPopup)
-Vue.use(vsInput)
-Vue.use(vsRadio)
-Vue.use(vsIcon)
-
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyC-hTpKRrz98OSNg-FzRcXsXQNezs9F9xk',
-    libraries: 'places', // This is required if you use the Autocomplete plugin
-  }
-})
 export default {
   name: "dashboard-page",
   data(){
