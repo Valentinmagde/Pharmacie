@@ -1,9 +1,9 @@
 module.exports = {
-  purge: [],
+  /* purge: [],
   target: 'relaxed',
-  prefix: '',
-  important: false,
-  separator: ':',
+  prefix: '', */
+  important: true,
+  /* separator: ':', */
   theme: {
     screens: {
       sm: '640px',
@@ -82,7 +82,7 @@ module.exports = {
         600: '#319795',
         700: '#2c7a7b',
         800: '#285e61',
-        900: '#234e52',
+        900: '#234e52'
       },
       blue: {
         100: '#ebf8ff',
@@ -94,6 +94,7 @@ module.exports = {
         700: '#2b6cb0',
         800: '#2c5282',
         900: '#2a4365',
+        1000: '#0069b4'
       },
       indigo: {
         100: '#ebf4ff',
@@ -212,7 +213,10 @@ module.exports = {
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
     },
-    container: {},
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     cursor: {
       auto: 'auto',
       default: 'default',
@@ -327,6 +331,27 @@ module.exports = {
       auto: 'auto',
       ...theme('spacing'),
       ...negative(theme('spacing')),
+      'px': '1px',
+      'base': '2.2rem',
+      '0': '0',
+      '1': '0.25rem',
+      '2': '0.5rem',
+      '3': '0.75rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '8': '2rem',
+      '10': '2.5rem',
+      '12': '3rem',
+      '16': '4rem',
+      '20': '5rem',
+      '24': '6rem',
+      '32': '8rem',
+      '-px': '-1px',
+      '-1': '-0.25rem',
+      '-2': '-0.5rem',
+      '-3': '-0.75rem',
+      '-4': '-1rem',
     }),
     maxHeight: {
       full: '100%',
@@ -391,7 +416,27 @@ module.exports = {
       '11': '11',
       '12': '12',
     },
-    padding: theme => theme('spacing'),
+    padding: (theme, { negative }) => ({
+      auto: 'auto',
+      ...theme('spacing'),
+      ...negative(theme('spacing')),
+      'px': '1px',
+      'base': '2.2rem',
+      '0': '0',
+      '1': '0.25rem',
+      '2': '0.5rem',
+      '3': '0.75rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '8': '2rem',
+      '10': '2.5rem',
+      '12': '3rem',
+      '16': '4rem',
+      '20': '5rem',
+      '24': '6rem',
+      '32': '8rem',
+    }),
     placeholderColor: theme => theme('colors'),
     placeholderOpacity: theme => theme('opacity'),
     space: (theme, { negative }) => ({
@@ -437,8 +482,8 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
-      full: '100%',
-      screen: '100vw',
+      'full': '100%',
+      'screen': '100vw',
     }),
     zIndex: {
       auto: 'auto',
@@ -769,6 +814,12 @@ module.exports = {
     transitionDelay: ['responsive'],
     animation: ['responsive'],
   },
-  corePlugins: {},
+  corePlugins: {
+    fontFamily: false,
+    letterSpacing: false,
+    backgroundPosition: false,
+    backgroundRepeat: false,
+    listStyleType: false,
+  },
   plugins: [],
 }

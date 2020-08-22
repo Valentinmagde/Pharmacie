@@ -3,8 +3,18 @@
     width: 100%
   }
   .bg-card {
-    background-color: #3f9b38;
+    /* background-color: #3f9b38; */
+    background-image: url('../img/joshua-coleman-cUmFjDhiTfc-unsplash.jpg');
+    background-size: cover;
   }
+
+  .color-overlay {
+    margin-top: -25px;
+    width: 100%;
+    height: 100%;
+    background-color: #3f9b38;
+    opacity: .97;
+ }
 
   .bg-zone {
     background-color: #0069b4;
@@ -45,7 +55,7 @@
   }
 
   .liste-pharmacie{
-    height: 550px;
+    height: 600px;
     background-color: #fff;
     padding-top: 10px;
     overflow: auto;
